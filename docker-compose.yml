@@ -11,7 +11,7 @@ services:
             - SENTRY_DB_PASSWORD=${POSTGRES_PASSWORD}
             - SENTRY_DB_NAME=sentry
         ports:
-            - 8080:9000
+            - ${SENTRY_PORT}:9000
         links:
             - redis
             - postgres
